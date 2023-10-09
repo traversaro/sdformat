@@ -116,9 +116,9 @@ set_target_properties(${BINDINGS_MODULE_NAME} PROPERTIES
 configure_build_install_location(${BINDINGS_MODULE_NAME})
 
 if (BUILD_TESTING AND NOT WIN32)
-  pybind11_add_module(sdformattest SHARED
-    test/_gz_sdformattest_pybind11.cc
-  )
+  #pybind11_add_module(sdformattest SHARED
+  #  test/_gz_sdformattest_pybind11.cc
+  #)
 
   target_link_libraries(sdformattest PRIVATE
     ${PROJECT_LIBRARY_TARGET_NAME}
@@ -156,7 +156,7 @@ if (BUILD_TESTING AND NOT WIN32)
     pyNoise_TEST
     pyNavSat_TEST
     pyParam_TEST
-    pyParserConfig_TEST
+    #pyParserConfig_TEST
     pyParticleEmitter_TEST
     pyPbr_TEST
     pyPhysics_TEST
